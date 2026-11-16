@@ -5,9 +5,9 @@ price = st.number_input("กรอกราคาเต็มของสิน�
 discount = st.number_input("กรอกส่วนลด (%):", min_value=0.0, max_value=100.0, value=0.0)
 discountTotal = price * (discount/100)
 addedVat = discountTotal * 0.07
-finalTotal = discountTotal - addedVat
+finalTotal = discountTotal + addedVat
 displayPrice = price - discountTotal
-displayDiscount = discountTotal * 100
+displayDiscount = discountTotal
 st.divider()
 st.write(f"• ส่วนลด ({discount}%): -{displayDiscount:.2f} บาท")
 st.write(f"• ราคาหลังหักส่วนลด: {displayPrice:.2f} บาท")
