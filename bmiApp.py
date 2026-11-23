@@ -7,7 +7,7 @@ weight = st.number_input("กรอกนํ้าหนักของคุณ
 height = st.number_input("กรอกความสูงของคุณ (cm):", min_value = 1.0, value = 1.0)
 
 if st.button("คำนวนค่า BMI 🎯"):
-  height_m = height_cm / 100
+  height_m = height / 100
   bmi = weight / (height_m ** 2)
 
   st.write ("---")
